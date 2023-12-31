@@ -1,0 +1,78 @@
+ol .pkmnType {
+    color: #fff;
+    padding: .25rem .5rem;
+    margin: .25rem 0;
+    font-size: .625rem;
+    border-radius: 1rem;
+    text-align: center;
+}
+.conteudo {
+    padding-top: 3.5rem;
+}
+.conteudo .detail {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.conteudo .foto {
+    text-align: center;
+    padding-top: .5rem;
+}
+.conteudo .foto img {
+    max-width: 100%;
+    height: 150px;
+    display: inline-block;
+}
+.nome {
+    color: #fff;
+    margin: 1rem 1rem 0;
+}
+
+.pkmnTypes {
+    list-style: none;
+    padding: 0.1rem 2rem 1rem;
+}
+.informacoes {
+    background-color: #f6f8fc;
+    padding-bottom: 3rem;
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+}
+.subtitle {
+    font-size: medium;
+    padding: 1.5rem 1rem 0.5rem;
+}
+.descricoes {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-size: .925rem;
+}
+.descricoes .pergunta {
+    color: black;
+    opacity: .7;
+}
+.descricoes .resposta {
+    font-weight: bold;
+}
+.number {
+    padding: 0.25rem 0.5rem;
+    color: #fff;
+    float: inline-end;
+    font-size: 1.25rem;
+    margin: 0 0.5rem;
+}
+.pkmnTypes .grass {
+    margin: 0.5rem 0;
+    padding: 0.25rem 0.5rem;
+    border-radius: 1rem;
+    filter: brightness(1.1);
+    color: #fff;
+}
+.pkmnTypes .poison {
+    margin: 0.5rem 0;
+    padding: 0.25rem 0.5rem;
+    border-radius: 1rem;
+    color: #fff;
+}

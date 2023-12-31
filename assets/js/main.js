@@ -27,8 +27,36 @@ function loadPokemonItens(offset, limit) {
     pokeApi.getPokemons(offset, limit).then((pokemons = []) => {
         const newHtml = pokemons.map(convertPokemonToLi).join('')
         pokemonList.innerHTML += newHtml
-    })
+
+        // Adiciona um ouvinte de evento de clique a cada item da lista
+        const items = document.querySelectorAll('.pokemon');
+        items.forEach((item, index) => {
+            const pokemonName = pokemons[index].name.toLowerCase(); // Obtém o nome do Pokémon
+            item.addEventListener('click', () => {
+                // Navegar para a página do Pokémon com base no nome
+                const pokemonDetailsURL = `/pokemon-pages/${pokemonName}.html`;
+
+                // Verifica se a página específica existe
+                fetch(pokemonDetailsURL)
+                    .then(response => {
+                        if (response.status === 200) {
+                            // Se a página existe, navega para ela
+                            window.location.href = pokemonDetailsURL;
+                        } else {
+                            // Se a página não existe, navega para a página genérica
+                            window.location.href = '/pokemon-pages/em-construção.html';
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Erro ao verificar a existência da página:', error);
+                    });
+            });
+        });
+    });
 }
+
+
+
 
 loadPokemonItens(offset, limit)
 
